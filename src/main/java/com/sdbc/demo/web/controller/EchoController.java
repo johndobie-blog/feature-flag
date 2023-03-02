@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@ConditionalOnProperty(name = "echo.enabled", matchIfMissing = false)
+@ConditionalOnProperty(name = "echo.enabled", havingValue = "true", matchIfMissing = false)
 public class EchoController {
 
     public static final String ECHO_ENDPOINT = "/echo";
